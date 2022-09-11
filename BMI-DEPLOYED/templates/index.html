@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Deployment</title>
+</head>
+<body>
+    <h3>BMI Prediction</h3>
+    {% if result %}
+    <h2>{{result[0]}}</h2>
+    {%endif%}
+    <form action="/prediction" method="post">
+        <label>Weight In Pound </label><br><br>
+        <input type="text" placeholder="Enter the Weight in pound" name="WeightInPound">
+
+        <br><br><label>BMI</label><br><br>
+        <input type="text" placeholder="Enter the BMI INDEX" name="BMI">
+
+        <br><br><input type="submit" value="prediction"> 
+    </form>
+</body>
+</html>
